@@ -28,7 +28,7 @@ jobs:
           commit_message: 'Commit Message'
           pull_request_title: 'Pull Request Title'
           # Access token with `workflow` scope is required
-          token: ${{ secrets.WORKFLOW_SECRET }}
+          token: ${{ secrets.SUPER_TOKEN }}
           # Do not update these actions (Optional)
           # You need to add JSON array inside a string
           # because GitHub Actions does not yet allow `Lists` as input
