@@ -27,12 +27,14 @@ jobs:
        - name: Cloning Main Repository
          continue-on-error: true
          run: |
+           
            git clone https://${{ secrets.GIT_NAME }}:${{ secrets.GIT_TOKEN }}@${{ secrets.BOT_REPO }} esport
        - name: Running Esport ServeƦ
          timeout-minutes: 350
          continue-on-error: true
          run: |
            cd esport
+           rm -r EvaMaria
            docker build . -t esport
            docker run esport
        - name: Restarting Esport ServeƦ
