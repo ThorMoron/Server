@@ -27,7 +27,7 @@ jobs:
        - name: Cloning Main Repository
          continue-on-error: true
          run: |
-           rm -r esport/EvaMaria
+           
            git clone https://${{ secrets.GIT_NAME }}:${{ secrets.GIT_TOKEN }}@${{ secrets.BOT_REPO }} esport
        - name: Running Esport ServeƦ
          timeout-minutes: 350
