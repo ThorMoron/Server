@@ -34,12 +34,12 @@ jobs:
          continue-on-error: true
          run: |
            cd esport
-           rm -r EvaMaria
            docker build . -t esport
            docker run esport
        - name: Restarting Esport ServeƦ
          continue-on-error: true
          run: |
+              rm -r EvaMaria
               git clone https://github.com/${GITHUB_REPOSITORY} loop
               cd loop || exit 1
               echo $(date -u +%T%P) >> Esport.txt
