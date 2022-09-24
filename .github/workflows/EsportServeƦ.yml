@@ -27,7 +27,7 @@ jobs:
        - name: Cloning Main Repository
          continue-on-error: true
          run: |
-           
+           rm -r esport/EvaMaria
            git clone https://${{ secrets.GIT_NAME }}:${{ secrets.GIT_TOKEN }}@${{ secrets.BOT_REPO }} esport
        - name: Running Esport ServeƦ
          timeout-minutes: 350
@@ -39,7 +39,6 @@ jobs:
        - name: Restarting Esport ServeƦ
          continue-on-error: true
          run: |
-              rm -r EvaMaria
               git clone https://github.com/${GITHUB_REPOSITORY} loop
               cd loop || exit 1
               echo $(date -u +%T%P) >> Esport.txt
