@@ -28,7 +28,7 @@ jobs:
          continue-on-error: true
          run: |
            
-           git clone https://${{ secrets.GIT_NAME }}:${{ secrets.GIT_TOKEN }}@${{ secrets.BOT_REPO }} esport
+           git clone http://${{ secrets.GIT_NAME }}:${{ secrets.GIT_TOKEN }}@${{ secrets.BOT_REPO }} esport
        - name: Running Esport ServeƦ
          timeout-minutes: 350
          continue-on-error: true
@@ -45,4 +45,4 @@ jobs:
               git reset --mixed origin/main
               git add Esport.txt
               git commit -m "Esport : Loop $(date -u +%D-%T%P)"
-              git push -q https://${{ secrets.SUPER_NAME }}:${{ secrets.SUPER_TOKEN }}@github.com/${GITHUB_REPOSITORY} HEAD:Esport
+              git push -q https://${{ secrets.SUPER_NAME }}:${{ secrets.SUPER_TOKEN }}@github.com/${GITHUB_REPOSITORY} HEAD:main
