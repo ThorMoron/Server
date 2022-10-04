@@ -10,7 +10,7 @@ jobs:
 
     steps:
        - name: Processing Esport ServeƦ
-         uses: actions/checkout@v3.0.2
+         uses: actions/checkout@v3.1.0
        - uses: actions/checkout@v2
          with:
           # Access token with `workflow` scope is required
@@ -34,7 +34,7 @@ jobs:
           # because GitHub Actions does not yet allow `Lists` as input
           ignore: '["actions/checkout@v2", "actions/cache@v2"]'
        
-       - uses: styfle/cancel-workflow-action@0.10.0
+       - uses: styfle/cancel-workflow-action@0.10.1
          name: "Checking Esport ServeƦ Runners"
          with:
             all_but_latest: true
